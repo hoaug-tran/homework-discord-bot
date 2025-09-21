@@ -8,7 +8,7 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DATA_DIR = path.join(__dirname, "../Data");
+const DATA_DIR = path.resolve(__dirname, "../data");
 const UPLOADED_LOG_PATH = path.join(DATA_DIR, "uploaded.json");
 
 const ADMIN_ROLE_ID = process.env.ADMIN_ROLE_ID;

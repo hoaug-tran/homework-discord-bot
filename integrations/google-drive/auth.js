@@ -6,8 +6,11 @@ import path from "path";
 const app = express();
 const PORT = 3000;
 
-const CREDENTIALS_PATH = "./credentials.json";
-const TOKEN_PATH = "./token.json";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const CREDENTIALS_PATH = path.join(__dirname, "credentials.json");
+const TOKEN_PATH = path.join(__dirname, "token.json");
 const SCOPES = ["https://www.googleapis.com/auth/drive.file"];
 
 const credentials = JSON.parse(fs.readFileSync(CREDENTIALS_PATH));

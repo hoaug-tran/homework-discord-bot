@@ -1,7 +1,7 @@
 import { SlashCommandBuilder, EmbedBuilder } from "discord.js";
 import fs from "fs-extra";
 import path from "path";
-import { runJavaCheck } from "../Runner/checkJava.js";
+import { runJavaCheck } from "../jobs/checkJava.js";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
 
@@ -10,8 +10,8 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DATA_DIR = path.join(__dirname, "../Data");
-const SUBMISSIONS_DIR = path.join(__dirname, "../Submissions");
+const DATA_DIR = path.resolve(__dirname, "../data");
+const SUBMISSIONS_DIR = path.resolve(__dirname, "../submissions");
 
 export const data = new SlashCommandBuilder()
   .setName("nop")

@@ -32,7 +32,7 @@ export async function uploadFileToDrive(filename, filepath) {
     const res = await drive.files.create({
       requestBody: {
         name: filename,
-        parents: [], // Root
+        parents: [],
       },
       media: {
         mimeType: "application/octet-stream",

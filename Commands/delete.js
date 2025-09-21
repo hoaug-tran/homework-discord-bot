@@ -15,7 +15,7 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DATA_DIR = path.join(__dirname, "../Data");
+const DATA_DIR = path.resolve(__dirname, "../data");
 const PAGE_SIZE = 25;
 
 export const data = new SlashCommandBuilder()

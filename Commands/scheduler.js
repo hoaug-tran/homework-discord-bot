@@ -6,12 +6,12 @@ import dotenv from "dotenv";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-dotenv.config({ path: path.join(__dirname, "../.env") });
+dotenv.config({ path: path.resolve(__dirname, "../.env") });
 const CHANNEL_ID = process.env.ALLOW_CHANNEL_ID;
 const FIXED_ROLE_ID = process.env.FIXED_ROLE_ID;
 const GUILD_ID = process.env.GUILD_ID;
 
-const DATA_DIR = path.join(__dirname, "../Data");
+const DATA_DIR = path.resolve(__dirname, "../data");
 const REMINDER_PATH = path.join(DATA_DIR, "reminders.json");
 
 function isInWindow(currentMs, targetMs, windowMs, margin = 60_000) {

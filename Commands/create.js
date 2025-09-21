@@ -3,7 +3,7 @@ import fs from "fs-extra";
 import path from "path";
 import ms from "ms";
 import { fileURLToPath } from "url";
-import { scheduleUpload } from "../Main/bot.js";
+import { scheduleUpload } from "../core/bot.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -11,7 +11,7 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DATA_DIR = path.join(__dirname, "../Data");
+const DATA_DIR = path.resolve(__dirname, "../data");
 
 export const data = new SlashCommandBuilder()
   .setName("tao")

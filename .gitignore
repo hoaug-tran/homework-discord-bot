@@ -1,19 +1,37 @@
 # Node
 node_modules/
-npm-debug.log
-yarn-error.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json.* 
 
-# Env
+# Env & Secrets
 .env
+.env.local
+.env.*.local
+credentials.json
+token.json
 
 # Logs
 logs/
 *.log
+*.log.*
+pids
+*.pid
+*.seed
+*.pid.lock
 
-# Cache
+# Cache & System
 .DS_Store
+Thumbs.db
 *.cache
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# App-specific
 avatar.cache.json
-
-
-
+data/*.json       
+submissions/      
+logs/             

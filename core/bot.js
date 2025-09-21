@@ -3,17 +3,17 @@ import fs from "fs-extra";
 import path from "path";
 import dotenv from "dotenv";
 import { fileURLToPath } from "url";
-import { run as uploadExpired } from "../Runner/uploadExpired.js";
+import { run as uploadExpired } from "../jobs/uploadExpired.js";
 import { setBotAvatarIfNeeded } from "./avatarSet.js";
-import { initReminderScheduler } from "../Commands/scheduler.js";
+import { initReminderScheduler } from "../commands/scheduler.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-dotenv.config({ path: path.join(__dirname, "../.env") });
+dotenv.config({ path: path.resolve(__dirname, "../.env") });
 
-const DATA_DIR = path.join(__dirname, "../Data");
-const COMMANDS_DIR = path.join(__dirname, "../Commands");
+const DATA_DIR = path.resolve(__dirname, "../data");
+const COMMANDS_DIR = path.resolve(__dirname, "../commands");
 const UPLOADED_LOG = path.join(DATA_DIR, "uploaded.json");
 
 const client = new Client({

@@ -7,7 +7,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-config({ path: path.join(__dirname, "../.env") });
+dotenv.config({ path: path.resolve(__dirname, "../.env") });
 
 if (!process.env.BOT_TOKEN || !process.env.CLIENT_ID || !process.env.GUILD_ID) {
   console.error("? Thiếu BOT_TOKEN, CLIENT_ID hoặc GUILD_ID trong .env");
@@ -18,7 +18,7 @@ const rest = new REST({ version: "10" }).setToken(process.env.BOT_TOKEN);
 
 async function loadCommands() {
   const commands = [];
-  const commandsPath = path.join(__dirname, "../Commands");
+  const commandsPath = path.join(__dirname, "../commands");
 
   if (!fs.existsSync(commandsPath)) {
     console.error("? Không tìm thấy thư mục Commands:", commandsPath);
