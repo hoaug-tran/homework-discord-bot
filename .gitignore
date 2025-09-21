@@ -31,7 +31,4 @@ Thumbs.db
 *.bak
 
 # App-specific
-avatar.cache.json
-data/*.json       
-submissions/      
-logs/             
+avatar.cache.json                 
