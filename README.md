@@ -20,7 +20,7 @@ npm init -y
 ### 2. Clone project
 
 ```bash
-git clone https://github.com/your-repo.git .
+git clone https://github.com/hoaug-tran/homework-discord-bot.git
 ```
 
 ### 3. Cài dependencies
@@ -92,11 +92,11 @@ http://localhost:3000/auth/google
 
 ```bash
 project-root/
- ├── core/            # bot.js, sync.js, initEnv.js
- ├── commands/        # slash commands (/nop, ...)
- ├── jobs/            # cron jobs, checkJava, uploadExpired
- ├── data/            # reminders.json, bt_xxx.json
- ├── submissions/     # bài nộp
- ├── integrations/    # google-drive/
+ ├── core/               # bot.js, sync.js, initEnv.js
+ ├── commands/           # slash commands (/nop, ...)
+ ├── jobs/               # cron jobs, checkJava, uploadExpired
+ ├── data/               # reminders.json, bt_xxx.json
+ ├── submissions/        # bài nộp
+ ├── integrations/       # google-drive/
  └── .env
 ```
